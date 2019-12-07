@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My2Cents Radio</title>
+    <style type="text/css">
+      :root {
+        --primary: #fafafa;
+        --secondary: #121212;
+        --highlight: #ef6c00;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --primary: #121212;
+          --secondary: #fafafa;
+        }
+      }
+
+      html,
+      body {
+        background-color: var(--primary);
+        color: var(--secondary);
+        margin: 0px;
+        /* via https://stackoverflow.com/a/47686467 */
+        overscroll-behavior-y: none;
+        height: 100%;
+        padding: 0px;
+      }
+
+      header {
+        position: fixed;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: #79bcba;
+      }
+
+      nav {
+        display: flex;
+        flex: 1;
+        max-width: 980px;
+        max-height: 44px;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav div a {
+        vertical-align: super;
+      }
+
+      nav div img {
+        width: 30px;
+      }
+
+      .section {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <nav id="nav-bar">
+        <div>
+          <img id="header-img" src="images/cropped-small-logo.png" />
+          <a class="nav-link" href="#home">Home</a>
+        </div>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#team">Team</a>
+      </nav>
+    </header>
+    <div id="home" class="section"></div>
+    <div id="about" class="section">
+      <iframe
+        id="video"
+        width="560"
+        height="315"
+        src="https://www.youtube-nocookie.com/embed/4daL8EVci8Y"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div id="team" class="section"></div>
+    <div class="section">
+      <form
+        action="https://www.freecodecamp.com/email-submit"
+        method="post"
+        id="form"
+      >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="john@acme.com"
+        />
+        <input type="submit" value="" id="submit" />
+      </form>
+    </div>
+  </body>
+  <!-- for testing purposes -->
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
